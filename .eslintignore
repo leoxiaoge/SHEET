@@ -1,0 +1,8 @@
+build
+dist
+test
+src/template/**
+src/libs
+src/task/worker
+
+.eslintrc.js

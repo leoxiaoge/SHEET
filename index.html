@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body id="demo1">
+</body>
+<script>
+    new XSheet('#demo1', {
+        workConfig: {
+            name: 'x-sheet',
+            top: {
+                option: {
+                    show: true,
+                },
+                menu: {
+                    show: true,
+                },
+            },
+            body: {
+                sheetConfig: {
+                    showMenu: true,
+                },
+                sheets: [{
+                    tableConfig: {
+                        rows: {
+                            data: [{height: 90}]
+                        },
+                        cols: {
+                            len: 100
+                        },
+                        data: [
+                            [{
+                                contentType: 2,
+                                fontAttr: {
+                                    textWrap: 2,
+                                    direction: 'vertical'
+                                },
+                                richText: {
+                                    rich: [{text: '哈哈aaFDF', color: 'rgb(255,0,2)'}, {text: 'FDFDFDF'}]
+                                }
+                            }]
+                        ],
+                        xFixedBar: {
+                            height: 2,
+                            width: 2,
+                        },
+                    },
+                }],
+                tabConfig: {
+                    showMenu: true,
+                },
+            },
+            bottom: {
+                show: true,
+            },
+        },
+    });
+</script>
+</html>
